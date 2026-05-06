@@ -5,8 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekov Systems — Scalable Software Architecture</title>
   <meta name="description" content="Rekov Systems builds secure, efficient, and scalable systems. Makers of materia-os and muma.">
+  <link rel="canonical" href="https://rekov.co/">
   <link rel="icon" href="./logo.png" type="image/png">
   <link rel="apple-touch-icon" href="./logo.png">
+
+  <!-- SEO / Social -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="theme-color" content="#05070b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rekov Systems">
+  <meta property="og:title" content="Rekov Systems — Scalable Software Architecture">
+  <meta property="og:description" content="Arquitectura y plataformas industriales escalables: PLM, CPQ, MES y ERP. Construido con CQRS, eventos y ABAC.">
+  <meta property="og:url" content="https://rekov.co/">
+  <meta property="og:image" content="https://rekov.co/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rekov Systems — Scalable Software Architecture">
+  <meta name="twitter:description" content="Arquitectura y plataformas industriales escalables: PLM, CPQ, MES y ERP.">
+  <meta name="twitter:image" content="https://rekov.co/logo.png">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
@@ -524,16 +541,33 @@
       .bracket { display: none; }
     }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rekov Systems",
+      "url": "https://rekov.co/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rekov.co/logo.png"
+      },
+      "sameAs": [
+        "https://co.linkedin.com/company/rekov-systems"
+      ]
+    }
+  </script>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="#" class="logo">
       <img class="logo-mark" src="./logo.png" alt="Rekov logo">
       Rekov
     </a>
     <ul class="nav-links">
+      <li><a href="materia-os.html">materia-os</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -541,12 +575,13 @@
     <a href="mailto:contact@rekov.co" class="nav-cta">Get in touch</a>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="bracket bracket-tl"></div>
-    <div class="bracket bracket-tr"></div>
-    <div class="bracket bracket-bl"></div>
-    <div class="bracket bracket-br"></div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="bracket bracket-tl"></div>
+      <div class="bracket bracket-tr"></div>
+      <div class="bracket bracket-bl"></div>
+      <div class="bracket bracket-br"></div>
 
     <div class="hero-badge">
       <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
@@ -571,12 +606,12 @@
         <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
     </div>
-  </section>
+    </section>
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
-    <p class="section-label">What we build</p>
-    <h2 class="section-title">Platforms built for scale, designed to last</h2>
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+      <p class="section-label">What we build</p>
+      <h2 class="section-title">Platforms built for scale, designed to last</h2>
 
     <div class="products-grid">
       <!-- materia-os -->
@@ -625,11 +660,11 @@
         </div>
       </div>
     </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-text">
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-text">
       <p class="section-label">About Rekov</p>
       <h2 class="section-title">We build the infrastructure others depend on</h2>
       <p>
@@ -665,20 +700,21 @@
         <div class="stat-label">Focus</div>
       </div>
     </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Ready to build something solid?</h2>
-    <p class="contact-sub">Tell us about your project. We can help design the architecture it deserves.</p>
-    <a href="mailto:contact@rekov.co" class="contact-link">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M2 6l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      contact@rekov.co
-    </a>
-  </section>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>Ready to build something solid?</h2>
+      <p class="contact-sub">Tell us about your project. We can help design the architecture it deserves.</p>
+      <a href="mailto:contact@rekov.co" class="contact-link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M2 6l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        contact@rekov.co
+      </a>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
