@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rekov Systems — Scalable Software Architecture</title>
-  <meta name="description" content="Rekov Systems builds secure, efficient, and scalable systems. Makers of materia-os and muma.">
+  <title>Rekov Systems — Arquitectura de software escalable</title>
+  <meta name="description" content="Rekov Systems construye sistemas seguros, eficientes y escalables. Creadores de materia-os y plm-software.">
   <link rel="canonical" href="https://rekov.co/">
   <link rel="icon" href="./logo.png" type="image/png">
   <link rel="apple-touch-icon" href="./logo.png">
@@ -14,15 +14,21 @@
   <meta name="theme-color" content="#05070b">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Rekov Systems">
-  <meta property="og:title" content="Rekov Systems — Scalable Software Architecture">
+  <meta property="og:title" content="Rekov Systems — Arquitectura de software escalable">
   <meta property="og:description" content="Arquitectura y plataformas industriales escalables: PLM, CPQ, MES y ERP. Construido con CQRS, eventos y ABAC.">
   <meta property="og:url" content="https://rekov.co/">
   <meta property="og:image" content="https://rekov.co/logo.png">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rekov Systems — Scalable Software Architecture">
+  <meta name="twitter:title" content="Rekov Systems — Arquitectura de software escalable">
   <meta name="twitter:description" content="Arquitectura y plataformas industriales escalables: PLM, CPQ, MES y ERP.">
   <meta name="twitter:image" content="https://rekov.co/logo.png">
+
+  <link rel="alternate" hreflang="es" href="https://rekov.co/">
+  <link rel="alternate" hreflang="en" href="https://rekov.co/en/">
+  <link rel="alternate" hreflang="x-default" href="https://rekov.co/">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
@@ -557,6 +563,23 @@
       ]
     }
   </script>
+
+  <script>
+    (() => {
+      const getPreferredLang = () => {
+        try { return localStorage.getItem('rekov_lang'); } catch { return null; }
+      };
+
+      const detectLang = () => {
+        const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+        const first = (langs?.[0] || 'es').toLowerCase();
+        return first.startsWith('en') ? 'en' : 'es';
+      };
+
+      const pref = getPreferredLang();
+      if (!pref && detectLang() === 'en') window.location.replace('https://rekov.co/en/');
+    })();
+  </script>
 </head>
 <body>
 
@@ -568,11 +591,16 @@
     </a>
     <ul class="nav-links">
       <li><a href="materia-os.html">materia-os</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#products">Productos</a></li>
+      <li><a href="#about">Acerca</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li>
+        <a href="https://rekov.co/" data-lang-switch="es" aria-label="Cambiar idioma a español">ES</a>
+        <span aria-hidden="true" style="opacity:.35;padding:0 8px;">|</span>
+        <a href="https://rekov.co/en/" data-lang-switch="en" aria-label="Cambiar idioma a inglés">EN</a>
+      </li>
     </ul>
-    <a href="mailto:contact@rekov.co" class="nav-cta">Get in touch</a>
+    <a href="mailto:contact@rekov.co" class="nav-cta">Hablemos</a>
   </nav>
 
   <main>
@@ -585,23 +613,23 @@
 
     <div class="hero-badge">
       <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
-      Since 2025 — Colombia
+      Desde 2025 — Colombia
     </div>
 
-    <h1>Infrastructure that <span>scales</span>. Code that endures.</h1>
+    <h1>Infraestructura que <span>escala</span>. Código que perdura.</h1>
 
     <p class="hero-sub">
-      Rekov Systems builds backend systems designed for growth.
-      From CQRS architectures to distributed workflows — we engineer the foundations that power ambitious products.
+      Rekov Systems construye sistemas backend diseñados para crecer.
+      De arquitecturas CQRS a flujos distribuidos — diseñamos las bases que sostienen productos ambiciosos.
     </p>
 
     <div class="hero-actions">
-      <a href="mailto:contact@rekov.co" class="btn-primary">Start a project</a>
-      <a href="#products" class="btn-outline">See our work</a>
+      <a href="mailto:contact@rekov.co" class="btn-primary">Iniciar proyecto</a>
+      <a href="#products" class="btn-outline">Ver productos</a>
     </div>
 
     <div class="scroll-indicator">
-      <span>Scroll</span>
+      <span>Desliza</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
@@ -610,8 +638,8 @@
 
     <!-- PRODUCTS -->
     <section class="products" id="products">
-      <p class="section-label">What we build</p>
-      <h2 class="section-title">Platforms built for scale, designed to last</h2>
+      <p class="section-label">Lo que construimos</p>
+      <h2 class="section-title">Plataformas construidas para escalar, diseñadas para durar</h2>
 
     <div class="products-grid">
       <!-- materia-os -->
@@ -624,9 +652,9 @@
         </div>
         <h3 class="product-name">materia-os</h3>
         <p class="product-desc">
-          Enterprise operations platform covering the full product lifecycle — PLM, BOM, MES, CPQ,
-          ERP, WMS, QMS, and more. Multi-tenant, cloud-native, built for companies that need
-          a unified system instead of disconnected tools.
+          Plataforma de operaciones empresariales que cubre el ciclo completo del producto — PLM, BOM, MES, CPQ,
+          ERP, WMS, QMS y más. Multi-tenant, cloud-native, hecha para compañías que necesitan
+          un sistema unificado en lugar de herramientas desconectadas.
         </p>
         <div class="product-tags">
           <span class="tag">PLM</span>
@@ -647,16 +675,16 @@
         </div>
         <h3 class="product-name">plm-software</h3>
         <p class="product-desc">
-          Product catalog and project management platform designed for teams that manage complex portfolios.
-          Role-based access, centralized product data, document management, and workflow automation.
-          Built for companies that need clarity across sales, design, and operations.
+          Plataforma de catálogo de productos y gestión de proyectos para equipos que administran portafolios complejos.
+          Acceso por roles, datos centralizados, gestión documental y automatización de flujos.
+          Hecha para compañías que necesitan claridad entre ventas, diseño y operación.
         </p>
         <div class="product-tags">
-          <span class="tag">Catalog</span>
-          <span class="tag">Role-based</span>
-          <span class="tag">Projects</span>
-          <span class="tag">Documents</span>
-          <span class="tag">Workflows</span>
+          <span class="tag">Catálogo</span>
+          <span class="tag">Roles</span>
+          <span class="tag">Proyectos</span>
+          <span class="tag">Documentos</span>
+          <span class="tag">Flujos</span>
         </div>
       </div>
     </div>
@@ -665,31 +693,31 @@
     <!-- ABOUT -->
     <section class="about" id="about">
       <div class="about-text">
-      <p class="section-label">About Rekov</p>
-      <h2 class="section-title">We build the infrastructure others depend on</h2>
+      <p class="section-label">Acerca de Rekov</p>
+      <h2 class="section-title">Construimos la infraestructura de la que otros dependen</h2>
       <p>
-        Rekov Systems is a <strong>software development initiative</strong> based in Colombia.
-        We specialize in <strong>scalable software architecture</strong> and <strong>backend engineering solutions</strong>.
+        Rekov Systems es una <strong>iniciativa de desarrollo de software</strong> con base en Colombia.
+        Nos especializamos en <strong>arquitectura de software escalable</strong> y <strong>soluciones de ingeniería backend</strong>.
       </p>
       <p>
-        We understand that the foundation of any successful digital product is
-        <strong>solid infrastructure</strong>. That's why we focus on the architecture that others build on —
-        designing systems that are <strong>secure, efficient, and scalable</strong> from day one.
+        Entendemos que la base de cualquier producto digital exitoso es
+        una <strong>infraestructura sólida</strong>. Por eso nos enfocamos en la arquitectura sobre la que otros construyen —
+        diseñando sistemas <strong>seguros, eficientes y escalables</strong> desde el día uno.
       </p>
       <p>
-        Using best development practices and cutting-edge technologies, we create
-        software at the <strong>systemic level</strong>, integrating advanced solutions
-        to meet each project's unique objectives.
+        Con mejores prácticas y tecnologías de punta, construimos
+        software a <strong>nivel sistémico</strong>, integrando soluciones avanzadas
+        para cumplir los objetivos únicos de cada proyecto.
       </p>
     </div>
     <div class="about-stats">
       <div class="stat">
         <div class="stat-number">2025</div>
-        <div class="stat-label">Founded</div>
+        <div class="stat-label">Fundada</div>
       </div>
       <div class="stat">
         <div class="stat-number">2+</div>
-        <div class="stat-label">Products</div>
+        <div class="stat-label">Productos</div>
       </div>
       <div class="stat">
         <div class="stat-number">Cloud</div>
@@ -697,15 +725,15 @@
       </div>
       <div class="stat">
         <div class="stat-number">B2B</div>
-        <div class="stat-label">Focus</div>
+        <div class="stat-label">Enfoque</div>
       </div>
     </div>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h2>Ready to build something solid?</h2>
-      <p class="contact-sub">Tell us about your project. We can help design the architecture it deserves.</p>
+      <h2>¿Listo para construir algo sólido?</h2>
+      <p class="contact-sub">Cuéntanos tu proyecto. Te ayudamos a diseñar la arquitectura que merece.</p>
       <a href="mailto:contact@rekov.co" class="contact-link">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
@@ -724,9 +752,19 @@
     </div>
     <ul class="footer-links">
       <li><a href="https://co.linkedin.com/company/rekov-systems" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:contact@rekov.co">Email</a></li>
+      <li><a href="mailto:contact@rekov.co">Correo</a></li>
     </ul>
   </footer>
 
+  <script>
+    (() => {
+      const setPref = (lang) => {
+        try { localStorage.setItem('rekov_lang', lang); } catch {}
+      };
+      document.querySelectorAll('[data-lang-switch]').forEach((a) => {
+        a.addEventListener('click', () => setPref(a.getAttribute('data-lang-switch')));
+      });
+    })();
+  </script>
 </body>
 </html>
