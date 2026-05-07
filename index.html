@@ -570,6 +570,11 @@
         try { return localStorage.getItem('rekov_lang'); } catch { return null; }
       };
 
+      const isCrawler = () => {
+        const ua = (navigator.userAgent || '').toLowerCase();
+        return /bot|crawler|spider|crawling|slurp|bingpreview|duckduckbot|baiduspider|yandex|sogou|exabot|facebookexternalhit|facebot|twitterbot|linkedinbot|discordbot|whatsapp|telegrambot|applebot/i.test(ua);
+      };
+
       const detectLang = () => {
         const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
         const first = (langs?.[0] || 'es').toLowerCase();
@@ -577,7 +582,7 @@
       };
 
       const pref = getPreferredLang();
-      if (!pref && detectLang() === 'en') window.location.replace('https://rekov.co/en/');
+      if (!pref && !isCrawler() && detectLang() === 'en') window.location.replace('https://rekov.co/en/');
     })();
   </script>
 </head>
