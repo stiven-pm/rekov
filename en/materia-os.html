@@ -4,24 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>materia-os — Modular PLM + CPQ + MES + ERP</title>
-  <meta name="description" content="materia-os (in development): a modular platform for PLM (BOM/MBOM/PDM), CPQ (quotes + workflow), MES (WO/routing/OEE), and ERP (GL/journals/costing). Multi-tenant, auditable, end-to-end.">
-
+  <meta name="description" content="materia-os (in development): modular platform for PLM (BOM/MBOM/PDM), CPQ (quoting + workflow), MES (WO/routing/OEE), and ERP (GL/journals/costing). Multi-tenant, auditable, built for end-to-end flows.">
   <link rel="canonical" href="https://rekov.co/en/materia-os.html">
-  <link rel="alternate" hreflang="es" href="https://rekov.co/materia-os.html">
-  <link rel="alternate" hreflang="en" href="https://rekov.co/en/materia-os.html">
-  <link rel="alternate" hreflang="x-default" href="https://rekov.co/">
 
   <link rel="icon" href="../logo.png" type="image/png">
   <link rel="apple-touch-icon" href="../logo.png">
   <link rel="stylesheet" href="../style.css">
 
-  <!-- SEO / Social -->
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="theme-color" content="#05070b">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Rekov Systems">
   <meta property="og:title" content="materia-os — Modular PLM + CPQ + MES + ERP">
-  <meta property="og:description" content="A modular platform for PLM, CPQ, MES, and ERP: BOM/MBOM/PDM, CPQ workflow, MES execution, and financial ERP foundations.">
+  <meta property="og:description" content="Modular platform for PLM, CPQ, MES, and ERP: PLM/BOM/PDM, CPQ workflow, MES execution, and financial ERP.">
   <meta property="og:url" content="https://rekov.co/en/materia-os.html">
   <meta property="og:image" content="https://rekov.co/logo.png">
   <meta property="og:locale" content="en_US">
@@ -29,8 +24,12 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="materia-os — Modular PLM + CPQ + MES + ERP">
-  <meta name="twitter:description" content="A modular platform for PLM, CPQ, MES, and ERP.">
+  <meta name="twitter:description" content="Modular platform for PLM, CPQ, MES, and ERP.">
   <meta name="twitter:image" content="https://rekov.co/logo.png">
+
+  <link rel="alternate" hreflang="es" href="https://rekov.co/materia-os.html">
+  <link rel="alternate" hreflang="en" href="https://rekov.co/en/materia-os.html">
+  <link rel="alternate" hreflang="x-default" href="https://rekov.co/materia-os.html">
 
   <script type="application/ld+json">
     {
@@ -55,233 +54,161 @@
           "operatingSystem": "Web",
           "url": "https://rekov.co/en/materia-os.html",
           "image": "https://rekov.co/logo.png",
-          "description": "Modular (in development) platform for PLM, CPQ, MES, and ERP: BOM/MBOM/PDM, quoting + workflow, operational execution, and accounting/GL."
+          "description": "Modular platform (in development) for PLM, CPQ, MES, and ERP: BOM/MBOM/PDM, quoting with workflow, operational execution, and GL accounting."
         }
       ]
     }
   </script>
-
-  <script>
-    (() => {
-      try {
-        const pref = localStorage.getItem('rekov_lang');
-        if (pref === 'es') window.location.replace('https://rekov.co/materia-os.html');
-      } catch {}
-    })();
-  </script>
 </head>
 <body>
-  <!-- NAV -->
+
   <nav aria-label="Primary navigation">
-    <a href="./" class="logo">
-      <img class="logo-mark" src="../logo.png" alt="Rekov logo">
-      Rekov
-    </a>
-    <ul class="nav-links">
-      <li><a href="./materia-os.html">materia-os</a></li>
-      <li><a href="./#products">Products</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="https://rekov.co/materia-os.html" data-lang-switch="es" aria-label="Switch language to Spanish">ES</a>
-        <span aria-hidden="true" style="opacity:.35;padding:0 8px;">|</span>
-        <a href="https://rekov.co/en/materia-os.html" data-lang-switch="en" aria-label="Switch language to English">EN</a>
-      </li>
-    </ul>
-    <a href="mailto:contact@rekov.co" class="nav-cta">Get in touch</a>
+    <div class="shell nav-inner">
+      <a href="/en/" class="logo">
+        <img class="logo-mark" src="../logo.png" alt="">
+        Rekov
+      </a>
+      <ul class="nav-links">
+        <li><a href="materia-os.html" aria-current="page">materia-os</a></li>
+        <li><a href="/en/#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="lang-switch">
+          <a href="https://rekov.co/materia-os.html">ES</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <a href="https://rekov.co/en/materia-os.html" aria-current="true">EN</a>
+        </li>
+      </ul>
+      <a href="mailto:contact@rekov.co" class="nav-cta">Get in touch</a>
+    </div>
   </nav>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="bracket bracket-tl"></div>
-      <div class="bracket bracket-tr"></div>
-      <div class="bracket bracket-bl"></div>
-      <div class="bracket bracket-br"></div>
-
-      <div class="hero-badge">
-        <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
-        materia-os — in development
-      </div>
-
-      <h1>PLM, CPQ, MES, and ERP in one <span>modular platform</span>.</h1>
-
-      <p class="hero-sub">
-        Designed for scalable and customized architectures: PLM with BOM/MBOM + PDM, CPQ with workflow and manufacturability,
-        MES with WOs/routings/OEE, and ERP foundations with GL/journals/costing.
-      </p>
-
-      <div class="hero-actions">
-        <a href="mailto:contact@rekov.co" class="btn-primary">Request a demo</a>
-        <a href="#products" class="btn-outline">See modules</a>
-      </div>
-
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-    </section>
-
-    <!-- MODULES -->
-    <section class="products" id="products">
-      <p class="section-label">Modules</p>
-      <h2 class="section-title">The essentials to close the end-to-end loop</h2>
-
-      <div class="products-grid">
-        <!-- PLM -->
-        <div class="product-card">
-          <div class="product-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none">
-              <rect x="3" y="3" width="22" height="22" rx="4" stroke="currentColor" stroke-width="2"/>
-              <path d="M8 14h12M14 8v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="product-name">PLM governance</h3>
-          <p class="product-desc">
-            Materials, processes, items, and revisions; BOM/MBOM with history; PDM and cost rollups for engineering and operations.
-          </p>
-          <div class="product-tags">
-            <span class="tag">BOM</span>
-            <span class="tag">MBOM</span>
-            <span class="tag">PDM</span>
-            <span class="tag">Cost rollup</span>
-          </div>
-        </div>
-
-        <!-- CPQ -->
-        <div class="product-card">
-          <div class="product-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none">
-              <path d="M4 6h20M4 12h20M4 18h12M4 24h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="product-name">CPQ + workflow</h3>
-          <p class="product-desc">
-            Quoting, acceptance, and orchestration of O2C flows with manufacturability and consistency guards.
-          </p>
-          <div class="product-tags">
-            <span class="tag">Quote</span>
-            <span class="tag">Guards</span>
-            <span class="tag">Workflow</span>
-            <span class="tag">O2C</span>
-          </div>
-        </div>
-
-        <!-- MES -->
-        <div class="product-card">
-          <div class="product-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none">
-              <path d="M7 8h14v12H7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 11h8M10 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="product-name">MES execution</h3>
-          <p class="product-desc">
-            Work orders, batches, routing, and operational reporting; connectable to QMS for closures and corrective actions.
-          </p>
-          <div class="product-tags">
-            <span class="tag">WO</span>
-            <span class="tag">OEE</span>
-            <span class="tag">Scrap</span>
-            <span class="tag">QMS links</span>
-          </div>
-        </div>
-
-        <!-- ERP -->
-        <div class="product-card">
-          <div class="product-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none">
-              <path d="M8 8h12l-1 12H9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M10 10h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="product-name">ERP foundations</h3>
-          <p class="product-desc">
-            GL, periods, entries and journals; account/cost mapping with support for rollups and financial traceability.
-          </p>
-          <div class="product-tags">
-            <span class="tag">GL</span>
-            <span class="tag">Journals</span>
-            <span class="tag">Costs</span>
-            <span class="tag">Periods</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="about-text">
-        <p class="section-label">About Rekov</p>
-        <h2 class="section-title">Scalable, customized industrial platforms</h2>
-        <p>
-          Rekov Systems builds industrial platforms on a shared, reusable foundation: multi-tenant, auditable,
-          event-driven, observable, and secure by design.
+    <header class="hero">
+      <div class="shell">
+        <p class="hero-kicker">materia-os · in development</p>
+        <h1>PLM, CPQ, MES, and ERP in one <em>modular platform</em></h1>
+        <p class="hero-lead">
+          Scalable architecture for industry: BOM/MBOM and PDM in PLM, quoting with workflow in CPQ,
+          WO and OEE execution in MES, and GL accounting with journals in ERP.
         </p>
-        <p>
-          materia-os exists to unify PLM + CPQ + MES + ERP into complete flows, avoiding brittle integrations
-          and promoting data consistency across engineering, plant operations, and finance.
-        </p>
+        <div class="hero-actions">
+          <a href="mailto:contact@rekov.co" class="btn btn-primary">Request a demo</a>
+          <a href="#modules" class="btn btn-text">See modules</a>
+        </div>
       </div>
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-number">2025</div>
-          <div class="stat-label">Founded</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">2+</div>
-          <div class="stat-label">Platforms</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">Cloud</div>
-          <div class="stat-label">Native</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">B2B</div>
-          <div class="stat-label">Focus</div>
-        </div>
+    </header>
+
+    <section id="modules">
+      <div class="shell">
+        <h2 class="section-heading">Modules</h2>
+        <ol class="work-list">
+          <li class="work-item">
+            <div class="work-static">
+              <span class="work-index">01</span>
+              <div class="work-content">
+                <h3>PLM governance</h3>
+                <p>
+                  Materials, processes, items, and revisions. BOM/MBOM with history,
+                  PDM, and cost rollups for engineering and operations.
+                </p>
+                <span class="work-meta">BOM · MBOM · PDM · Cost rollup</span>
+              </div>
+            </div>
+          </li>
+          <li class="work-item">
+            <div class="work-static">
+              <span class="work-index">02</span>
+              <div class="work-content">
+                <h3>CPQ + workflow</h3>
+                <p>
+                  Quoting, acceptance, and O2C orchestration with manufacturability
+                  and data consistency guards.
+                </p>
+                <span class="work-meta">Quote · Guards · Workflow · O2C</span>
+              </div>
+            </div>
+          </li>
+          <li class="work-item">
+            <div class="work-static">
+              <span class="work-index">03</span>
+              <div class="work-content">
+                <h3>MES execution</h3>
+                <p>
+                  Work orders, batches, routing, and operational reporting.
+                  Connectable to QMS for closures and corrective actions.
+                </p>
+                <span class="work-meta">WO · OEE · Scrap · QMS links</span>
+              </div>
+            </div>
+          </li>
+          <li class="work-item">
+            <div class="work-static">
+              <span class="work-index">04</span>
+              <div class="work-content">
+                <h3>ERP foundations</h3>
+                <p>
+                  GL, periods, entries, and journals. Account and cost mapping
+                  with rollups and financial traceability.
+                </p>
+                <span class="work-meta">GL · Journals · Costs · Periods</span>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <h2>Let’s talk architecture</h2>
-      <p class="contact-sub">
-        If you need a modular industrial platform (PLM/CPQ/MES/ERP) for your process, write to us and we’ll guide you.
-      </p>
-      <a href="mailto:contact@rekov.co" class="contact-link">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M2 6l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        contact@rekov.co
-      </a>
+    <section id="about">
+      <div class="shell about-grid">
+        <div class="about-prose">
+          <h2 class="section-heading section-heading--plain">Why materia-os</h2>
+          <p>
+            Rekov Systems builds industrial platforms on a reusable foundation:
+            <strong>multi-tenant, auditable</strong>, with events, observability, and security by design.
+          </p>
+          <p>
+            materia-os unifies PLM, CPQ, MES, and ERP into complete flows, avoiding brittle integrations
+            and promoting consistency across engineering, plant operations, and finance.
+          </p>
+        </div>
+        <dl class="about-aside">
+          <div class="about-fact">
+            <dt>Status</dt>
+            <dd>Active development</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Architecture</dt>
+            <dd>Modular, event-driven, multi-tenant</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Flows</dt>
+            <dd>End-to-end: engineering → plant → finance</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell contact-block">
+        <h2>Let's talk architecture</h2>
+        <a href="mailto:contact@rekov.co" class="contact-email">contact@rekov.co</a>
+      </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-left">
-      <img class="footer-mark" src="../logo.png" alt="Rekov logo">
-      <span class="footer-copy">© 2026 Rekov Systems. All rights reserved.</span>
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <img class="footer-mark" src="../logo.png" alt="">
+        <span>© 2026 Rekov Systems</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://co.linkedin.com/company/rekov-systems" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:contact@rekov.co">Email</a></li>
+      </ul>
     </div>
-    <ul class="footer-links">
-      <li><a href="https://co.linkedin.com/company/rekov-systems" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:contact@rekov.co">Email</a></li>
-    </ul>
   </footer>
 
-  <script>
-    (() => {
-      const setPref = (lang) => {
-        try { localStorage.setItem('rekov_lang', lang); } catch {}
-      };
-      document.querySelectorAll('[data-lang-switch]').forEach((a) => {
-        a.addEventListener('click', () => setPref(a.getAttribute('data-lang-switch')));
-      });
-    })();
-  </script>
 </body>
 </html>
